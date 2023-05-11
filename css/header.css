@@ -7,6 +7,7 @@
     width: 100%;
     background-color: var(--body-color);
     z-index: var(--z-fixed);
+    transition: .4s;
 }
 
 .nav {
@@ -34,6 +35,7 @@
     border-radius: 4rem;
     padding: 1rem 2.25rem;
     backdrop-filter: blur(10px);
+    transition: .4s;
 }
 
 .nav__list {
@@ -57,4 +59,5 @@
             hsla(var(--first-hue), var(--sat), var(--lig), .2)
         );
     box-shadow: 0 0 16px hsla(var(--first-hue), var(--sat), var(--lig), .4);
+    color: var(--title-color);
 }
