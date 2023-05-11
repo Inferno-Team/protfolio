@@ -86,7 +86,8 @@ h3 {
 ul {
     list-style: none;
 }
-li{
+
+li {
     display: block;
 }
 
@@ -142,6 +143,42 @@ img {
     color: var(--text-color-light);
 }
 
-.scroll-header{
+.scroll-header {
     box-shadow: 0 4px hsla(0, 0%, 4%, .3);
+}
+
+::-webkit-scrollbar {
+    width: .6rem;
+    border-radius: .5rem;
+    background-color: hsl(var(--second-hue), 8%, 38%);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--second-hue), 8%, 26%);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--second-hue), 8%, 20%);
+}
+
+
+/* THEME */
+.change-theme {
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.change-theme:hover {
+    color: var(--first-color);
+}
+
+/* Variables Light Theme */
+body.light-theme {
+    --title-color: hsl(var(--second-hue), 15%, 15%);
+    --text-color: hsl(var(--second-hue), 8%, 35%);
+    --body-color: hsl(var(--second-hue), 100%, 99%);
+    --container-color: #fff;
+
 }
