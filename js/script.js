@@ -1,3 +1,13 @@
+import {
+    generate_skills
+} from './generate_skills.js'
+import {
+    generate_services
+} from './generate_services.js'
+import {
+    generate_works
+} from './generate_works.js'
+
 function scrolHeader() {
     let header = document.getElementById('header');
     if (this.scrollY >= 50)
@@ -7,25 +17,6 @@ function scrolHeader() {
 }
 window.addEventListener('scroll', scrolHeader);
 
-/* MIX IT UP */
-
-let mixer = mixitup('.work__container', {
-    selectors: {
-        target: '.work__card'
-    },
-    animation: {
-        duration: 300
-    }
-});
-
-/* link active work */
-const linkWork = document.querySelectorAll('.work__item');
-
-function activeWork() {
-    linkWork.forEach(l => l.classList.remove('active-work'));
-    this.classList.add('active-work');
-}
-linkWork.forEach(l => l.addEventListener('click', activeWork));
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
@@ -93,3 +84,27 @@ sr.reveal(`.home__handle .home__scroll`, {
     delay: 900,
     origin: 'bottom'
 })
+
+$(document).ready(() => {
+    generate_skills()
+    generate_services()
+    generate_works()
+
+});
+
+function sendEmail() {
+    function sendEmail() {
+        Email.send({
+                Host: "smtp.gmail.com",
+                Username: "sender@email_address.com",
+                Password: "Enter your password",
+                To: 'receiver@email_address.com',
+                From: "sender@email_address.com",
+                Subject: "Sending Email using javascript",
+                Body: "Well that was easy!!",
+            })
+            .then(function (message) {
+                alert("mail sent successfully")
+            });
+    }
+}
