@@ -25,6 +25,7 @@
     align-items: center;
     column-gap: .25rem;
     cursor: pointer;
+    margin-top: 1.25rem;
 }
 
 .services__button:hover .services__icon {

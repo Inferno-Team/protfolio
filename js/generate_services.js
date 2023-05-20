@@ -1,14 +1,30 @@
 export function generate_services() {
-    let services = [{
+    let services = [
+
+        {
+            title: 'Training<br>Beginner',
+            modal: {
+                title: 'Training & Instruction',
+                desc: `Teaching beginner or junior step by step and guiding them into programming world.`,
+                list: [
+                    'Andorid',
+                    'Laravel',
+                    'Vue',
+                    'Flutter'
+                ]
+            }
+        },
+        {
             title: 'Mobile<br>Application',
             modal: {
                 title: 'Mobile Application',
-                desc: 'Native Android application with Java | Kotlin ',
+                desc: `Service with more than 7+ years of experience.<br>
+                        Produce a beautiful and bug-free application.`,
                 list: [
-                    'andorid',
-                    'java',
-                    'kolin',
-                    'flutter'
+                    'Andorid',
+                    'Java',
+                    'Kolin',
+                    'Flutter'
                 ]
             }
         },
@@ -16,11 +32,12 @@ export function generate_services() {
             title: 'Back<br>End',
             modal: {
                 title: 'Back End',
-                desc: 'Native Android application with Java | Kotlin ',
+                desc: `Service with more than 3+ years of experience.<br>
+                Produce a restFul API and GraphQL API well documented.`,
                 list: [
-                    'laravel',
-                    'php',
-                    'node.Js',
+                    'Laravel',
+                    'PHP',
+                    'Node.Js',
                     'JS/TS'
                 ]
             }
@@ -29,11 +46,13 @@ export function generate_services() {
             title: 'Front<br>End',
             modal: {
                 title: 'Front End',
-                desc: 'Native Android application with Java | Kotlin ',
+                desc: `Service with more than 3+ years of experience.<br>
+                Produce a user friendly website.`,
                 list: [
-                    'html',
-                    'css',
-                    'js',
+                    "Vue",
+                    'HTML',
+                    'CSS',
+                    'JS',
                 ]
             }
         },
@@ -41,12 +60,13 @@ export function generate_services() {
             title: 'Full<br>Stack',
             modal: {
                 title: 'Full Stack',
-                desc: 'Native Android application with Java | Kotlin ',
+                desc: `Service with more than 3+ years of experience.<br>
+                Produce a bug-free, beautiful website and well documented`,
                 list: [
-                    'laravel',
-                    'php',
+                    'Laravel',
+                    'PHP',
                     'Vue',
-                    'js'
+                    'JS'
                 ]
             }
         },
