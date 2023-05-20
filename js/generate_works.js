@@ -2,19 +2,19 @@ export function generate_works() {
     let works = [{
             type: 'mobile',
             title: 'My Day Application',
-            img: '/imgs/myday.jpg',
+            img: 'imgs/myday.jpg',
             link:'https://team-inferno-mobile-my-day-app.en.uptodown.com/'
         },
         {
             type: 'laravel',
             title: 'YAMHAD Market',
-            img: '/imgs/YAMHAD.png',
+            img: 'imgs/YAMHAD.png',
             link:'#'
         },
         {
             type: 'fullstack',
             title: 'Hire Me',
-            img: '/imgs/hireme.PNG',
+            img: 'imgs/hireme.PNG',
             link:'https://hireme.inferno-team.cloud/'
         },
     ]

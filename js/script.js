@@ -89,22 +89,35 @@ $(document).ready(() => {
     generate_skills()
     generate_services()
     generate_works()
-
+    $('form').submit(function (e) {
+        e.preventDefault();
+        sendEmail();
+        // or return false;
+    });
 });
 
 function sendEmail() {
-    function sendEmail() {
-        Email.send({
-                Host: "smtp.gmail.com",
-                Username: "sender@email_address.com",
-                Password: "Enter your password",
-                To: 'receiver@email_address.com',
-                From: "sender@email_address.com",
-                Subject: "Sending Email using javascript",
-                Body: "Well that was easy!!",
-            })
-            .then(function (message) {
-                alert("mail sent successfully")
-            });
-    }
+    let name = document.getElementById('mail_name').value;
+    let email = document.getElementById('mail_email').value;
+    let project = document.getElementById('mail_project').value;
+    // $.post('../php/send_email.php', {
+    //     email: email,
+    //     name: name,
+    //     project: project
+    // }, function (data, status) {
+    //     console.log("Data: " + data + "\nStatus: " + status);
+    // });
+    $.ajax({
+        type: 'POST',
+        url: "php/send_email.php",
+        data: {
+            email: email,
+            name: name,
+            project: project
+        },
+        success: function (data) {
+            let json = JSON.parse(data);
+            alert(json.result);
+        }
+    });
 }

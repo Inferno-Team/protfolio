@@ -200,24 +200,26 @@
                 </div>
                 <div class="contact__content">
                     <h3 class="contact__title">Write me your project</h3>
-                    <form action="" class="contact__form">
+                    <form class="contact__form">
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Name</label>
-                            <input type="text" placeholder="Insert yout name" class="contact__form-input">
+                            <input autocomplete="off" id="mail_name" type="text" placeholder="Insert yout name"
+                                class="contact__form-input">
                         </div>
 
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Mail</label>
-                            <input type="email" placeholder="Insert your email" class="contact__form-input">
+                            <input autocomplete="off" id="mail_email" type="email" placeholder="Insert your email"
+                                class="contact__form-input">
                         </div>
 
                         <div class="contact__form-div contact__form-area">
                             <label for="" class="contact__form-tag">Project</label>
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Write your project"
+                            <textarea name="" id="mail_project" cols="30" rows="10" placeholder="Write your project"
                                 class=" contact__form-input"></textarea>
                         </div>
 
-                        <button class="button" click="sendEmail">Send Message</button>
+                        <button class="button">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -258,7 +260,9 @@
             </div>
         </footer>
     </main>
-    <script src="js/jquery-3.7.0.slim.min.js"></script>
+    <!-- <script src="js/jquery-3.7.0.slim.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="js/mixitup.min.js"></script>
     <script src="js/scrollreveal.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
