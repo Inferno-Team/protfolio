@@ -3,19 +3,30 @@ export function generate_works() {
             type: 'mobile',
             title: 'My Day Application',
             img: 'imgs/myday.jpg',
-            link:'https://team-inferno-mobile-my-day-app.en.uptodown.com/'
+            link: 'https://team-inferno-mobile-my-day-app.en.uptodown.com/',
+            langs: ['java', 'kotlin', 'back4apps']
         },
         {
             type: 'laravel',
             title: 'YAMHAD Market',
             img: 'imgs/YAMHAD.png',
-            link:'#'
+            link: '#',
+            langs: ['laravel']
         },
+        {
+            type: 'laravel',
+            title: 'Hotel Management API',
+            img: 'imgs/hotel.webp',
+            link: 'https://hotel.inferno-team.cloud/docs/index.html',
+            langs: ['laravel']
+        },
+
         {
             type: 'fullstack',
             title: 'Hire Me',
             img: 'imgs/hireme.PNG',
-            link:'https://hireme.inferno-team.cloud/'
+            link: 'https://hireme.inferno-team.cloud/',
+            langs: ['laravel', 'vue.js', 'vuetify']
         },
     ]
     let works_html = ``
