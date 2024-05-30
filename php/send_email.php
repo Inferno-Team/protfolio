@@ -2,11 +2,11 @@
 require_once "../vendor/autoload.php";
 
 use PHPMailer\PHPMailer\PHPMailer;
-
+$env = parse_ini_file(".env");
 function send_mail($email, $recipient_name, $message = '')
 {
 
-    $env = parse_ini_file(".env");
+    global $env;
     $mail = new PHPMailer(false);
 
     $mail->CharSet = "utf-8";
