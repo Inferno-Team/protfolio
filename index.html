@@ -1,337 +1,779 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inferno-Team</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/skills.css" />
-    <link rel="stylesheet" href="css/services.css" />
-    <link rel="stylesheet" href="css/work.css" />
-    <link rel="stylesheet" href="css/contact.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <!-- Header & Nav -->
-    <header class="header" id="header">
-      <nav class="nav container">
-        <a href="#" class="nav__logo">Inferno-Team</a>
-        <div class="nav__menu">
-          <ui class="nav__list">
-            <li class="nav__item">
-              <a href="#home" class="nav__link active-link">
-                <i class="bx bx-home-alt"></i>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#about" class="nav__link">
-                <i class="bx bx-user"></i>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#skills" class="nav__link">
-                <i class="bx bx-book"></i>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#service" class="nav__link">
-                <i class="bx bxs-layer"></i>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#work" class="nav__link">
-                <i class="bx bx-briefcase-alt-2"></i>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">
-                <i class="bx bx-message-square-detail"></i>
-              </a>
-            </li>
-            <!-- Theme Change Button -->
-          </ui>
-        </div>
-        <i class="bx bx-moon change-theme" id="theme-button"></i>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio of Mohammed Mousa Alissa, a software engineer and Flutter developer building polished mobile products with clean architecture and production discipline." />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Mohammed Mousa Alissa | Software Engineer</title>
+  <link rel="icon" type="image/png" href="imgs/favicon.png" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="site-shell">
+    <div class="page-blur page-blur--cyan" aria-hidden="true"></div>
+    <div class="page-blur page-blur--amber" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header" id="header">
+      <div class="container header__inner">
+        <a href="#home" class="brand">
+          Mohammed<span>Mousa Alissa</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"
+          aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav" id="nav-menu" aria-label="Primary">
+          <a href="#home" class="nav__link active-link">Home</a>
+          <a href="#about" class="nav__link">About</a>
+          <a href="#experience" class="nav__link">Experience</a>
+          <a href="#work" class="nav__link">Work</a>
+          <a href="#skills" class="nav__link">Stack</a>
+          <a href="#contact" class="nav__link">Contact</a>
+        </nav>
+      </div>
     </header>
-    <!-- Main -->
-    <main class="main">
-      <!-- Home Section -->
-      <section class="home section" id="home">
-        <div class="home__container container grid">
-          <div class="home__data">
-            <span class="home__greeting">Hello,I'm</span>
-            <h1 class="home__name">Mohammed AlEssa</h1>
-            <h3 class="home__education">Seinor Software Developer</h3>
-            <div class="home__buttons">
-              <a
-                href="cv/MohammedMousaAlissaCV.pdf"
-                download="cv/MohammedMousaAlissaCV.pdf"
-                class="button button--ghost"
-              >
-                Download CV
-              </a>
-              <a
-                href="https://www.canva.com/design/DAFAoXyQ-MQ/ik2UOSyf1MuaquMPJUeBlQ/view?utm_content=DAFAoXyQ-MQ&utm_campaign=designshare&utm_medium=link&utm_source=editor"
-                class="button button--ghost"
-                target="_blank"
-              >
-                View CV
-              </a>
-              <a href="#about" class="button">About Me</a>
-            </div>
-          </div>
-          <div class="home__social">
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/mmi997/"
-              class="home__social-link"
-            >
-              <i class="bx bxl-linkedin-square"></i>
-            </a>
-            <a
-              target="_blank"
-              href=" https://github.com/Inferno-Team"
-              class="home__social-link"
-            >
-              <i class="bx bxl-github"></i>
-            </a>
-          </div>
-          <a href="#about" class="home__scroll">
-            <i class="bx bx-mouse home-scroll-icon"></i>
-            <span class="home__scroll-name">Scroll Down</span>
-          </a>
-        </div>
-      </section>
-      <!-- About Section -->
-      <section class="about section" id="about">
-        <span class="section__subtitle">My Intro</span>
-        <h2 class="section__title">About Me</h2>
-        <div class="about__container container grid">
-          <img src="imgs/home_img.jpg" alt="" class="about__img" />
-          <div class="about__data">
-            <div class="about__info">
-              <div class="about__box">
-                <i class="bx bx-award about__icon"></i>
-                <h3 class="about__title">Experience</h3>
-                <span class="about__subtitl">9+Years Working</span>
-              </div>
 
-              <div class="about__box">
-                <i class="bx bx-briefcase-alt about__icon"></i>
-                <h3 class="about__title">Completed</h3>
-                <span class="about__subtitl">46+ Projects</span>
-              </div>
-
-              <div class="about__box">
-                <i class="bx bx-support about__icon"></i>
-                <h3 class="about__title">Support</h3>
-                <span class="about__subtitl">Online 24/7</span>
-              </div>
-            </div>
-            <p class="about__description">
-              Software developer, I create mobile applications using android
-              native java | kotlin and Flutter framework, for backend I'm using
-              Laravel framework and for frontend I'm using Vue.Js framework.
-              I've more than 7 years of experience and many open sourced project
-              on my github account.
+    <main>
+      <section class="hero section" id="home">
+        <div class="container hero__container">
+          <div class="hero__content reveal">
+            <span class="eyebrow">Software Engineer • Flutter Developer</span>
+            <h1 class="hero__title">
+              I build mobile products that feel polished, reliable, and ready
+              for real production use.
+            </h1>
+            <p class="hero__description">
+              Senior software engineer focused on Flutter, clean architecture,
+              backend integration, and release-ready delivery across the Apple
+              App Store and Google Play Store.
             </p>
-            <a href="#contact" class="button">Contact Me</a>
+
+            <div class="hero__actions">
+              <a href="cv/Mohammed-Mousa-Alissa-Resume-2026.pdf" download class="button button--primary">
+                Download Resume
+              </a>
+              <a href="#work" class="button button--secondary">
+                See Selected Work
+              </a>
+              <a href="mailto:mohammed.9issa@gmail.com" class="button button--ghost">
+                Email Me
+              </a>
+            </div>
+
+            <ul class="hero__notes">
+              <li>Aleppo, Syria</li>
+              <li>Flutter-first product delivery</li>
+              <li>REST, GraphQL, Firebase, WebSockets</li>
+            </ul>
           </div>
-        </div>
-      </section>
-      <!-- Skills Section -->
-      <section class="skills section" id="skills">
-        <span class="section__subtitle">My abilities</span>
-        <h2 class="section__title">My Experience</h2>
-        <div
-          class="skills__container container grid"
-          id="skills__container"
-        ></div>
-      </section>
-      <!-- SERVICES -->
-      <section class="services section" id="service">
-        <span class="section__subtitle">My Services</span>
-        <h2 class="section__title">What I Offer</h2>
-        <div class="services__container container grid" id="services"></div>
-      </section>
-      <!-- Work -->
-      <section class="work section" id="work">
-        <span class="section__subtitle">My Portfolio</span>
-        <h2 class="section__title">Recent Work</h2>
-        <div class="work__filters">
-          <span class="work__item active-work" data-filter="all">All</span>
-          <span class="work__item" data-filter=".flutter">Flutter</span>
-          <span class="work__item" data-filter=".mobile">Mobile</span>
-          <span class="work__item" data-filter=".laravel">Laravel</span>
-          <span class="work__item" data-filter=".fullstack">Full Stack</span>
-          <!-- <span class="work__item" data-filter=".flutter">Flutter</span> -->
-          <!-- <span class="work__item" data-filter=".vue">Vue.Js</span> -->
-        </div>
-        <div class="work__container container grid" id="works"></div>
-      </section>
-      <!-- Testmone -->
-      <!-- later -->
-      <!-- Contact -->
-      <section class="contact section" id="contact">
-        <span class="section__subtitle">Get in touch</span>
-        <h2 class="section__title">Contact Me</h2>
-        <div class="contact__container container grid">
-          <div class="contact__content">
-            <h3 class="contact__title">Talk to me</h3>
-            <div class="contact__info">
-              <div class="contact__card">
-                <i class="bx bx-mail-send contact__card-icon"></i>
-                <h3 class="contact__card-title">Email</h3>
-                <span class="contact__card-data">mohammed.9issa@gmail.com</span>
-                <a
-                  href="mailto:mohammed.9issa@gmail.com"
-                  target="_blank"
-                  class="contact__button"
-                >
-                  Write me
-                  <i class="bx bx-right-arrow-alt contact__button-icon"></i>
-                </a>
+
+          <div class="hero__visual reveal">
+            <div class="hero__scene tilt-card" data-tilt>
+              <div class="hero__grid" aria-hidden="true"></div>
+              <div class="hero__ring hero__ring--large" aria-hidden="true"></div>
+              <div class="hero__ring hero__ring--small" aria-hidden="true"></div>
+
+              <div class="tech-pill tech-pill--one" data-parallax="18">
+                Flutter
+              </div>
+              <div class="tech-pill tech-pill--two" data-parallax="12">
+                Laravel
+              </div>
+              <div class="tech-pill tech-pill--three" data-parallax="20">
+                Kotlin
+              </div>
+              <div class="tech-pill tech-pill--four" data-parallax="10">
+                GraphQL
               </div>
 
-              <div class="contact__card">
-                <i class="bx bxl-whatsapp contact__card-icon"></i>
-                <h3 class="contact__card-title">Whatsapp</h3>
-                <span class="contact__card-data">+963943581149</span>
-                <a
-                  href="https://api.whatsapp.com/send?phone=963943581149&text=Hi"
-                  target="_blank"
-                  class="contact__button"
-                >
-                  Write me
-                  <i class="bx bx-right-arrow-alt contact__button-icon"></i>
-                </a>
+              <div class="scene-card scene-card--top">
+                <span class="scene-card__label">Experience</span>
+                <strong>8+ years</strong>
+                <span>shipping software and mentoring teams</span>
               </div>
 
-              <div class="contact__card">
-                <i class="bx bxl-telegram send contact__card-icon"></i>
-                <h3 class="contact__card-title">Telegram</h3>
-                <span class="contact__card-data">@mi149</span>
-                <a
-                  href="https://t.me/m149i"
-                  target="_blank"
-                  class="contact__button"
-                >
-                  Write me
-                  <i class="bx bx-right-arrow-alt contact__button-icon"></i>
-                </a>
+              <div class="scene-card scene-card--bottom">
+                <span class="scene-card__label">Impact</span>
+                <strong>150+ students</strong>
+                <span>guided through graduation projects</span>
+              </div>
+
+              <div class="scene-card scene-card--side">
+                <span class="scene-card__label">Delivery</span>
+                <strong>App Store + Play Store</strong>
+                <span>release ownership and compliance</span>
+              </div>
+
+              <div class="hero__portrait-wrap">
+                <img src="imgs/profile-hero.webp" alt="Mohammed Mousa Alissa" class="hero__portrait" />
               </div>
             </div>
           </div>
-          <div class="contact__content">
-            <h3 class="contact__title">Write me your project</h3>
-            <form class="contact__form">
-              <div class="contact__form-div">
-                <label for="" class="contact__form-tag">Name</label>
-                <input
-                  autocomplete="off"
-                  id="mail_name"
-                  type="text"
-                  placeholder="Insert yout name"
-                  class="contact__form-input"
-                />
-              </div>
+        </div>
+      </section>
 
-              <div class="contact__form-div">
-                <label for="" class="contact__form-tag">Mail</label>
-                <input
-                  autocomplete="off"
-                  id="mail_email"
-                  type="email"
-                  placeholder="Insert your email"
-                  class="contact__form-input"
-                />
-              </div>
+      <section class="metrics section section--compact" aria-label="Career metrics">
+        <div class="container metrics__grid">
+          <article class="metric-card panel reveal tilt-card" data-tilt>
+            <span class="metric-card__value">8+</span>
+            <span class="metric-card__label">Years building software</span>
+          </article>
+          <article class="metric-card panel reveal tilt-card" data-tilt>
+            <span class="metric-card__value">150+</span>
+            <span class="metric-card__label">Students mentored</span>
+          </article>
+          <article class="metric-card panel reveal tilt-card" data-tilt>
+            <span class="metric-card__value">21 days</span>
+            <span class="metric-card__label">to launch the My Day MVP</span>
+          </article>
+          <article class="metric-card panel reveal tilt-card" data-tilt>
+            <span class="metric-card__value">2 stores</span>
+            <span class="metric-card__label">App Store and Google Play shipping</span>
+          </article>
+        </div>
+      </section>
 
-              <div class="contact__form-div contact__form-area">
-                <label for="" class="contact__form-tag">Project</label>
-                <textarea
-                  name=""
-                  id="mail_project"
-                  cols="30"
-                  rows="10"
-                  placeholder="Write your project"
-                  class="contact__form-input"
-                ></textarea>
-              </div>
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">About</span>
+            <h2 class="section-title">
+              Engineering with product sense, not just feature output.
+            </h2>
+          </div>
 
-              <button class="button">Send Message</button>
-            </form>
+          <div class="about__grid">
+            <article class="panel about__panel reveal tilt-card" data-tilt>
+              <p class="about__lead">
+                I specialize in cross-platform mobile development with Flutter
+                and the engineering discipline needed to keep products healthy
+                after launch.
+              </p>
+              <p>
+                My recent work spans multi-vendor commerce, printing
+                workflows, on-demand fuel delivery, coupon platforms, QR
+                flows, subscription systems, yard operations, and native
+                Android background services for live provider tracking.
+              </p>
+              <p>
+                I work comfortably from Figma handoff to reusable UI systems,
+                API integration, release management, and production support.
+              </p>
+            </article>
+
+            <article class="panel profile-card reveal tilt-card" data-tilt>
+              <h3>Quick Profile</h3>
+              <ul class="profile-list">
+                <li>
+                  <span>Current focus</span>
+                  <strong>Flutter architecture and product delivery</strong>
+                </li>
+                <li>
+                  <span>Core stack</span>
+                  <strong>Dart, Flutter, Laravel, PHP, Kotlin, Java</strong>
+                </li>
+                <li>
+                  <span>State management</span>
+                  <strong>BLoC, Cubit, GetX, Riverpod, MVVM</strong>
+                </li>
+                <li>
+                  <span>Education</span>
+                  <strong>B.Sc. in Computer Engineering, Aleppo University</strong>
+                </li>
+                <li>
+                  <span>Languages</span>
+                  <strong>Arabic (native), English (proficient)</strong>
+                </li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="footer__container container">
-          <h1 class="footer__title">Inferno-Team</h1>
-          <ul class="footer__list">
-            <li>
-              <a href="#about" class="footer__link">About</a>
-            </li>
 
-            <li>
-              <a href="#work" class="footer__link">Work</a>
-            </li>
+      <section class="section" id="experience">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Experience</span>
+            <h2 class="section-title">
+              Recent roles, shipped products, and technical ownership.
+            </h2>
+          </div>
 
-            <li>
-              <!-- <a href="#testimonial" class="footer__link">Testimonial</a> -->
-              <a href="#service" class="footer__link">Services</a>
-            </li>
-          </ul>
+          <div class="timeline">
+            <article class="timeline__item panel reveal tilt-card" data-tilt>
+              <div class="timeline__header">
+                <div>
+                  <h3>Senior Flutter Developer · Part-Time</h3>
+                  <p>UnifiSolutions</p>
+                </div>
+                <span>Dec 2025 – May 2026 · Canada (Remote)</span>
+              </div>
+              <ul class="timeline__list">
+                <li>Built features for a yard management system across mobile and web apps.</li>
+                <li>Converted Figma designs into reusable pages, widgets, dashboards, and CRUD flows.</li>
+                <li>Delivered QR-based vehicle lookup, inventory reporting, and PDF printing workflows.</li>
+              </ul>
+            </article>
 
-          <ul class="footer__social">
-            <a
-              href="https://www.fb.com/mohammed00issa"
-              target="_blank"
-              class="footer__social-link"
-            >
-              <i class="bx bxl-facebook"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/mohammed9issa/"
-              target="_blank"
-              class="footer__social-link"
-            >
-              <i class="bx bxl-instagram"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/mmi997/"
-              target="_blank"
-              class="footer__social-link"
-            >
-              <i class="bx bxl-linkedin-square"></i>
-            </a>
-          </ul>
-          <span class="footer__copy">
-            &#169; Inferno-Team. All right reserved
-          </span>
+            <article class="timeline__item panel reveal tilt-card" data-tilt>
+              <div class="timeline__header">
+                <div>
+                  <h3>Senior Flutter Developer</h3>
+                  <p>DigiWorld Developers</p>
+                </div>
+                <span>May 2024 – Present · Aleppo, Syria</span>
+              </div>
+              <ul class="timeline__list">
+                <li>Lead Flutter development and mentor a junior developer on production mobile apps.</li>
+                <li>Built and published Paper With Click and Waslak across customer and provider experiences.</li>
+                <li>Implemented native Kotlin background location and heartbeat services for provider tracking.</li>
+              </ul>
+            </article>
+
+            <article class="timeline__item panel reveal tilt-card" data-tilt>
+              <div class="timeline__header">
+                <div>
+                  <h3>Senior Flutter Developer</h3>
+                  <p>TSH</p>
+                </div>
+                <span>Jun 2023 – May 2024 · Egypt (Remote)</span>
+              </div>
+              <ul class="timeline__list">
+                <li>Maintained Wathba and Roaya Wattan as multilingual cross-platform commerce products.</li>
+                <li>Worked with BLoC, Cubit, and GetX while integrating Thawani and UR-WAY payment gateways.</li>
+                <li>Built OTP-based QR flows, subscriptions, and scalable modular application structures.</li>
+              </ul>
+            </article>
+
+            <article class="timeline__item panel reveal tilt-card" data-tilt>
+              <div class="timeline__header">
+                <div>
+                  <h3>Senior Laravel Developer</h3>
+                  <p>FlexiAcademy</p>
+                </div>
+                <span>Jun 2021 – Jun 2023 · Malaysia (Remote)</span>
+              </div>
+              <ul class="timeline__list">
+                <li>Migrated a legacy Moodle platform into Laravel microservices with an API-first architecture.</li>
+                <li>Built REST and GraphQL APIs and added WebSocket features for real-time interactions.</li>
+                <li>Improved scalability and frontend performance using Laravel Lighthouse.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="experience__aside">
+            <article class="panel impact-card reveal">
+              <h3>Selected impact</h3>
+              <ul class="impact-list">
+                <li>
+                  Delivered the My Day Android MVP in 21 days and reached
+                  1,500+ downloads within 14 days.
+                </li>
+                <li>
+                  Helped My Day place 3rd in the Scale Up in Syria 2024
+                  competition.
+                </li>
+                <li>
+                  Mentored 150+ students and supported 35+ graduation
+                  projects across Flutter and Android.
+                </li>
+              </ul>
+            </article>
+          </div>
         </div>
-      </footer>
+      </section>
+
+      <section class="section" id="work">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Selected Work</span>
+            <h2 class="section-title">
+              Production products, platform launches, and high-leverage builds.
+            </h2>
+          </div>
+
+          <div class="work-switch reveal" role="tablist" aria-label="Work categories">
+            <button class="work-switch__button is-active" type="button" data-work-filter="all">
+              All Work
+            </button>
+            <button class="work-switch__button" type="button" data-work-filter="ecosystem">
+              DigiWorld Ecosystem
+            </button>
+            <button class="work-switch__button" type="button" data-work-filter="apps">
+              Store Apps
+            </button>
+            <button class="work-switch__button" type="button" data-work-filter="systems">
+              Systems
+            </button>
+          </div>
+
+          <div class="projects__grid">
+            <article class="project-card panel reveal tilt-card" data-tilt data-work-group="apps ecosystem">
+              <div class="project-card__top">
+                <div class="project-card__brand">
+                  <div class="project-card__logo project-card__logo--monogram">
+                    <img src="./imgs/icons/warka.png" alt="waraka-b-nakra logo" class="project-card__logo" />
+                  </div>
+                  <span class="project-card__tag">Flutter · MVVM · GetX</span>
+                </div>
+                <h3>Paper With Click</h3>
+              </div>
+              <p>
+                Multi-vendor eCommerce and printing request platform with
+                customer and vendor experiences, order flows, notifications,
+                and real-time status updates.
+              </p>
+              <ul class="chip-list">
+                <li>Printing requests</li>
+                <li>Multi-vendor flow</li>
+                <li>Store deployment</li>
+              </ul>
+              <div class="project-card__actions">
+                <a href="https://play.google.com/store/apps/details?id=com.digiworld_dev.waraka_customer_mobile"
+                  target="_blank" rel="noreferrer" class="project-link">
+                  <i class="bx bxl-play-store"></i>
+                  Google Play
+                </a>
+                <a href="https://apps.apple.com/us/app/waraka-b-nakra/id6751147161" target="_blank" rel="noreferrer"
+                  class="project-link">
+                  <i class="bx bxl-apple"></i>
+                  App Store
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card panel reveal tilt-card" data-tilt data-work-group="apps ecosystem">
+              <div class="project-card__top">
+                <div class="project-card__brand">
+                  <div class="project-card__logo project-card__logo--monogram">
+                    <img src="./imgs/icons/waslak.png" alt="waslak logo" class="project-card__logo" />
+
+                  </div>
+                  <span class="project-card__tag">Flutter · Kotlin service</span>
+                </div>
+                <h3>Waslak</h3>
+              </div>
+              <p>
+                On-demand gas and fuel delivery product with ordering, trip
+                management, live tracking, route updates, and provider
+                availability handled through native Android background work.
+              </p>
+              <ul class="chip-list">
+                <li>Live tracking</li>
+                <li>Provider heartbeat</li>
+                <li>Customer + provider apps</li>
+              </ul>
+              <div class="project-card__actions">
+                <a href="https://play.google.com/store/apps/details?id=com.digiworlddev.waselak.customer"
+                  target="_blank" rel="noreferrer" class="project-link">
+                  <i class="bx bxl-play-store"></i>
+                  Google Play
+                </a>
+                <a href="https://apps.apple.com/us/app/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82-%D9%88%D8%A7%D8%B5%D9%84%D9%83/id6760796577"
+                  target="_blank" rel="noreferrer" class="project-link">
+                  <i class="bx bxl-apple"></i>
+                  App Store
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card panel reveal tilt-card" data-tilt data-work-group="apps">
+              <div class="project-card__top">
+                <div class="project-card__brand">
+                  <div class="project-card__logo project-card__logo--monogram">
+                    <img src="./imgs/icons/wathba.png" alt="wathba-vendor-app logo" class="project-card__logo" />
+                  </div>
+                  <span class="project-card__tag">Flutter · Thawani · QR</span>
+                </div>
+                <h3>Wathba Vendor App</h3>
+              </div>
+              <p>
+                Vendor operations app for a multi-vendor commerce platform,
+                including multilingual support, payment gateway integration,
+                subscription logic, and OTP-based QR workflows.
+              </p>
+              <ul class="chip-list">
+                <li>Thawani</li>
+                <li>Vendor operations</li>
+                <li>Arabic + English</li>
+              </ul>
+              <div class="project-card__actions">
+                <a href="https://play.google.com/store/apps/details?id=com.wathba.vendor" target="_blank"
+                  rel="noreferrer" class="project-link">
+                  <i class="bx bxl-play-store"></i>
+                  Google Play
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card panel reveal tilt-card" data-tilt data-work-group="apps">
+              <div class="project-card__top">
+                <div class="project-card__brand">
+                  <div class="project-card__logo project-card__logo--monogram">
+                    <img src="./imgs/icons/royaa.png" alt="wathba-vendor-app logo" class="project-card__logo" />
+                  </div>
+                  <span class="project-card__tag">Flutter · UR-WAY · Coupons</span>
+                </div>
+                <h3>Roaya Wattan</h3>
+              </div>
+              <p>
+                Coupon and discount platform built as a multilingual
+                cross-platform app with subscription flows and UR-WAY payment
+                integration.
+              </p>
+              <ul class="chip-list">
+                <li>UR-WAY</li>
+                <li>Subscriptions</li>
+                <li>Arabic + English</li>
+              </ul>
+              <div class="project-card__actions">
+                <span class="project-note">Private engagement</span>
+              </div>
+            </article>
+
+            <article class="project-card panel reveal tilt-card" data-tilt data-work-group="systems ecosystem">
+              <div class="project-card__top">
+                <div class="project-card__brand">
+                  <img src="https://pay.digiworld-dev.com/assets/img/favicon/digipay-icon.svg" alt="DigiPay logo"
+                    class="project-card__logo" />
+                  <span class="project-card__tag">Laravel · Payments · Ecosystem</span>
+                </div>
+                <h3>DigiPay</h3>
+              </div>
+              <p>
+                Payment platform delivered as part of the DigiWorld
+                Developers ecosystem, supporting broader product and service
+                workflows beyond a single internal tool.
+              </p>
+              <ul class="chip-list">
+                <li>Payments platform</li>
+                <li>Payments workflow</li>
+                <li>Ecosystem module</li>
+              </ul>
+              <div class="project-card__actions">
+                <a href="https://pay.digiworld-dev.com/" target="_blank" rel="noreferrer" class="project-link">
+                  <i class="bx bx-link-external"></i>
+                  Visit Site
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card panel reveal tilt-card" data-tilt data-work-group="systems ecosystem">
+              <div class="project-card__top">
+                <div class="project-card__brand">
+                  <img src="https://post.digiworld-dev.com/favicon.ico" alt="DigiPost logo"
+                    class="project-card__logo" />
+                  <span class="project-card__tag">Laravel · Logistics · In Development</span>
+                </div>
+                <h3>DigiPost</h3>
+              </div>
+              <p>
+                In-development DigiWorld system focused on delivery and post
+                operations as part of the wider internal product ecosystem.
+              </p>
+              <ul class="chip-list">
+                <li>Under development</li>
+                <li>Internal platform</li>
+                <li>Ecosystem module</li>
+              </ul>
+              <div class="project-card__actions">
+                <a href="https://post.digiworld-dev.com/" target="_blank" rel="noreferrer" class="project-link">
+                  <i class="bx bx-link-external"></i>
+                  Visit Site
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card panel reveal tilt-card" data-tilt data-work-group="systems ecosystem">
+              <div class="project-card__top">
+                <div class="project-card__brand">
+                  <img src="https://digichat.digiworld-dev.com/assets/img/favicon/favicon.ico" alt="DigiChat logo"
+                    class="project-card__logo" />
+                  <span class="project-card__tag">Realtime · Messaging · SDKs</span>
+                </div>
+                <h3>DigiChat</h3>
+              </div>
+              <p>
+                WhatsApp messaging platform with documented API flows for
+                session status, QR connection, signed message sending, and
+                dashboard-driven integration as part of the DigiWorld
+                ecosystem.
+              </p>
+              <ul class="chip-list">
+                <li>QR sessions</li>
+                <li>Signed API requests</li>
+                <li>SDK and docs</li>
+              </ul>
+              <div class="project-card__actions">
+                <a href="https://digichat.digiworld-dev.com/docs" target="_blank" rel="noreferrer" class="project-link">
+                  <i class="bx bx-book-open"></i>
+                  Read Docs
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card panel reveal tilt-card" data-tilt data-work-group="systems">
+              <div class="project-card__top">
+                <div class="project-card__brand">
+                  <div class="project-card__logo project-card__logo--monogram">
+                    <img src="./imgs/icons/yard.png" alt="yard-management-system logo" class="project-card__logo" />
+                  </div>
+                  <span class="project-card__tag">Flutter · Web · QR/PDF</span>
+                </div>
+                <h3>Yard Management System</h3>
+              </div>
+              <p>
+                Two-application workflow for mobile and web with role-based
+                dashboards, car log management, QR vehicle lookup, inventory
+                reporting, and printable PDF cards for towed vehicles.
+              </p>
+              <ul class="chip-list">
+                <li>Role dashboards</li>
+                <li>CRUD operations</li>
+                <li>Private product</li>
+              </ul>
+              <div class="project-card__actions">
+                <span class="project-note">Private engagement</span>
+              </div>
+            </article>
+
+            <article class="project-card panel reveal tilt-card" data-tilt data-work-group="apps">
+              <div class="project-card__top">
+                <div class="project-card__brand">
+                  <div class="project-card__logo project-card__logo--monogram">
+                    <img src="./imgs/icons/my-day.png" alt="my-day-app logo" class="project-card__logo" />
+                  </div>
+                  <span class="project-card__tag">Android · MVP</span>
+                </div>
+                <h3>My Day App</h3>
+              </div>
+              <p>
+                Built the Android MVP in 21 days. The app reached 1,500+
+                downloads in 14 days and later contributed to a third-place
+                finish in Scale Up in Syria 2024.
+              </p>
+              <ul class="chip-list">
+                <li>Fast MVP launch</li>
+                <li>Growth proof</li>
+                <li>Competition recognition</li>
+              </ul>
+              <div class="project-card__actions">
+                <a href="https://play.google.com/store/apps/details?id=team.inferno.mobile.my_day_app" target="_blank"
+                  rel="noreferrer" class="project-link">
+                  <i class="bx bxl-play-store"></i>
+                  Google Play
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card panel reveal tilt-card" data-tilt data-work-group="systems">
+              <div class="project-card__top">
+                <div class="project-card__brand">
+                  <div class="project-card__logo project-card__logo--monogram">A</div>
+                  <span class="project-card__tag">Python · Laravel · AI</span>
+                </div>
+                <h3>AI-Powered Survey System</h3>
+              </div>
+              <p>
+                Graduation project scored 95%. Used GPT-based
+                recommendations and Gardner’s Multiple Intelligences Theory to
+                match students with suitable project topics and form stronger
+                teams.
+              </p>
+              <ul class="chip-list">
+                <li>Recommendation logic</li>
+                <li>Microservices mindset</li>
+                <li>Team formation workflow</li>
+              </ul>
+              <div class="project-card__actions">
+                <span class="project-note">Academic project</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Stack</span>
+            <h2 class="section-title">
+              The tools, architecture, and delivery habits I rely on.
+            </h2>
+          </div>
+
+          <div class="stack__grid">
+            <article class="stack-card panel reveal tilt-card" data-tilt>
+              <h3>Mobile Engineering</h3>
+              <ul class="stack-list">
+                <li>Flutter</li>
+                <li>Dart</li>
+                <li>Kotlin</li>
+                <li>Java</li>
+                <li>Native Android services</li>
+              </ul>
+            </article>
+
+            <article class="stack-card panel reveal tilt-card" data-tilt>
+              <h3>Architecture</h3>
+              <ul class="stack-list">
+                <li>Clean Architecture</li>
+                <li>MVVM</li>
+                <li>BLoC and Cubit</li>
+                <li>GetX</li>
+                <li>Riverpod</li>
+              </ul>
+            </article>
+
+            <article class="stack-card panel reveal tilt-card" data-tilt>
+              <h3>Backend and Realtime</h3>
+              <ul class="stack-list">
+                <li>Laravel</li>
+                <li>PHP</li>
+                <li>REST APIs</li>
+                <li>GraphQL</li>
+                <li>WebSockets and Firebase FCM</li>
+              </ul>
+            </article>
+
+            <article class="stack-card panel reveal tilt-card" data-tilt>
+              <h3>Delivery</h3>
+              <ul class="stack-list">
+                <li>GitHub and GitLab</li>
+                <li>App Store and Play Store releases</li>
+                <li>Jira and Trello</li>
+                <li>Code review and mentoring</li>
+                <li>Agile product delivery</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="services__grid">
+            <article class="service-card panel reveal tilt-card" data-tilt>
+              <h3>Launch new mobile products</h3>
+              <p>From Figma handoff to reusable UI, API integration, QA, and store release.</p>
+            </article>
+            <article class="service-card panel reveal tilt-card" data-tilt>
+              <h3>Stabilize existing codebases</h3>
+              <p>Improve state management, structure, performance, and long-term maintainability.</p>
+            </article>
+            <article class="service-card panel reveal tilt-card" data-tilt>
+              <h3>Bridge app and backend teams</h3>
+              <p>Translate product needs into workable API contracts, realtime flows, and release plans.</p>
+            </article>
+            <article class="service-card panel reveal tilt-card" data-tilt>
+              <h3>Lead and mentor delivery</h3>
+              <p>Support junior developers, raise code quality, and keep shipping velocity realistic.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Contact</span>
+            <h2 class="section-title">
+              Open to remote roles, product teams, and short build sprints.
+            </h2>
+          </div>
+
+          <div class="contact__grid">
+            <article class="panel contact__panel reveal tilt-card" data-tilt>
+              <h3>Reach me directly</h3>
+              <div class="contact__links">
+                <a href="mailto:mohammed.9issa@gmail.com" class="contact__link">
+                  <i class="bx bx-mail-send"></i>
+                  <span>
+                    <strong>Email</strong>
+                    <small>mohammed.9issa@gmail.com</small>
+                  </span>
+                </a>
+                <a href="https://www.linkedin.com/in/mmi997/" target="_blank" rel="noreferrer" class="contact__link">
+                  <i class="bx bxl-linkedin-square"></i>
+                  <span>
+                    <strong>LinkedIn</strong>
+                    <small>linkedin.com/in/mmi997</small>
+                  </span>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=963943581149&text=Hi" target="_blank" rel="noreferrer"
+                  class="contact__link">
+                  <i class="bx bxl-whatsapp"></i>
+                  <span>
+                    <strong>WhatsApp</strong>
+                    <small>+963 943 581 149</small>
+                  </span>
+                </a>
+                <a href="https://t.me/m149i" target="_blank" rel="noreferrer" class="contact__link">
+                  <i class="bx bxl-telegram"></i>
+                  <span>
+                    <strong>Telegram</strong>
+                    <small>@m149i</small>
+                  </span>
+                </a>
+                <a href="https://github.com/Inferno-Team" target="_blank" rel="noreferrer" class="contact__link">
+                  <i class="bx bxl-github"></i>
+                  <span>
+                    <strong>GitHub</strong>
+                    <small>github.com/Inferno-Team</small>
+                  </span>
+                </a>
+              </div>
+            </article>
+
+            <article class="panel form-panel reveal tilt-card" data-tilt>
+              <h3>Send project details</h3>
+              <form class="contact__form" id="contact-form">
+                <label class="field">
+                  <span>Name</span>
+                  <input type="text" id="mail_name" name="name" autocomplete="name" placeholder="Your name" required />
+                </label>
+
+                <label class="field">
+                  <span>Email</span>
+                  <input type="email" id="mail_email" name="email" autocomplete="email" placeholder="you@example.com"
+                    required />
+                </label>
+
+                <label class="field field--full">
+                  <span>Project</span>
+                  <textarea id="mail_project" name="project" rows="6"
+                    placeholder="Tell me what you are building, what stage it is in, and where you need help."
+                    required></textarea>
+                </label>
+
+                <div class="form-actions">
+                  <button class="button button--primary" type="submit">
+                    Send Message
+                  </button>
+                  <p class="contact__form-status" id="contact-form-status" aria-live="polite"></p>
+                </div>
+              </form>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
-    <!-- <script src="js/jquery-3.7.0.slim.min.js"></script> -->
-    <script
-      src="https://code.jquery.com/jquery-3.7.0.js"
-      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/scrollreveal.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"></script>
-    <script type="module" src="js/script.js"></script>
-  </body>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <p>Mohammed Mousa Alissa</p>
+        <p>Software Engineer · Flutter Developer</p>
+        <p>&copy; <span id="current-year"></span> All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/script.js" defer></script>
+</body>
+
 </html>
