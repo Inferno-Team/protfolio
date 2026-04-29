@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "cleancss --source-map --source-map-inline-sources -o css/style.min.css css/style.css",
+    "build:js": "terser js/script.js --compress --mangle --source-map \"url=script.min.js.map\" -o js/script.min.js"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "terser": "^5.39.0"
+  }
+}

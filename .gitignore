@@ -1,3 +1,4 @@
 vendor
 php/.env
 protfolio.zip
+/node_modules

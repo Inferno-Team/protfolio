@@ -118,7 +118,9 @@ if (workFilterButtons.length && workCards.length) {
       const filter = button.dataset.workFilter || "all";
 
       workFilterButtons.forEach((item) => {
-        item.classList.toggle("is-active", item === button);
+        const isActive = item === button;
+        item.classList.toggle("is-active", isActive);
+        item.setAttribute("aria-selected", isActive ? "true" : "false");
       });
 
       workCards.forEach((card) => {
