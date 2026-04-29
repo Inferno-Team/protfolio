@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
+  <meta name="description" data-i18n-meta="meta.description"
     content="Portfolio of Mohammed Mousa Alissa, a software engineer and Flutter developer building polished mobile products with clean architecture and production discipline." />
   <meta name="theme-color" content="#0b1020" />
-  <title>Mohammed Mousa Alissa | Software Engineer</title>
+  <title data-i18n-title="meta.title">Mohammed Mousa Alissa | Software Engineer</title>
   <link rel="icon" type="image/png" href="imgs/favicon.png" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body>
+<body class="is-loading">
+  <div class="page-loader" id="page-loader" aria-hidden="true">
+    <div class="page-loader__inner">
+      <div class="page-loader__spinner"></div>
+      <strong class="page-loader__name">Mohammed Mousa Alissa</strong>
+      <span class="page-loader__text" data-i18n="loader.text">Loading portfolio experience...</span>
+    </div>
+  </div>
   <div class="site-shell">
     <div class="page-blur page-blur--cyan" aria-hidden="true"></div>
     <div class="page-blur page-blur--amber" aria-hidden="true"></div>
@@ -25,6 +32,12 @@
           Mohammed<span>Mousa Alissa</span>
         </a>
 
+        <div class="header__controls">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme">
+            <i class="bx bx-moon"></i>
+          </button>
+        </div>
+
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"
           aria-label="Toggle navigation">
           <span></span>
@@ -32,12 +45,12 @@
         </button>
 
         <nav class="nav" id="nav-menu" aria-label="Primary">
-          <a href="#home" class="nav__link active-link">Home</a>
-          <a href="#about" class="nav__link">About</a>
-          <a href="#experience" class="nav__link">Experience</a>
-          <a href="#work" class="nav__link">Work</a>
-          <a href="#skills" class="nav__link">Stack</a>
-          <a href="#contact" class="nav__link">Contact</a>
+          <a href="#home" class="nav__link active-link" data-i18n="nav.home">Home</a>
+          <a href="#about" class="nav__link" data-i18n="nav.about">About</a>
+          <a href="#experience" class="nav__link" data-i18n="nav.experience">Experience</a>
+          <a href="#work" class="nav__link" data-i18n="nav.work">Work</a>
+          <a href="#skills" class="nav__link" data-i18n="nav.stack">Stack</a>
+          <a href="#contact" class="nav__link" data-i18n="nav.contact">Contact</a>
         </nav>
       </div>
     </header>
@@ -46,33 +59,34 @@
       <section class="hero section" id="home">
         <div class="container hero__container">
           <div class="hero__content reveal">
-            <span class="eyebrow">Software Engineer • Flutter Developer</span>
-            <h1 class="hero__title">
+            <span class="eyebrow" data-i18n="hero.eyebrow">Software Engineer • Flutter Developer</span>
+            <h1 class="hero__title" data-i18n="hero.title">
               I build mobile products that feel polished, reliable, and ready
               for real production use.
             </h1>
-            <p class="hero__description">
+            <p class="hero__description" data-i18n="hero.description">
               Senior software engineer focused on Flutter, clean architecture,
               backend integration, and release-ready delivery across the Apple
               App Store and Google Play Store.
             </p>
 
             <div class="hero__actions">
-              <a href="cv/Mohammed-Mousa-Alissa-Resume-2026.pdf" download class="button button--primary">
+              <a href="cv/Mohammed-Mousa-Alissa-Resume-2026.pdf" download class="button button--primary"
+                data-i18n="hero.actions.resume">
                 Download Resume
               </a>
-              <a href="#work" class="button button--secondary">
+              <a href="#work" class="button button--secondary" data-i18n="hero.actions.work">
                 See Selected Work
               </a>
-              <a href="mailto:mohammed.9issa@gmail.com" class="button button--ghost">
+              <a href="mailto:mohammed.9issa@gmail.com" class="button button--ghost" data-i18n="hero.actions.email">
                 Email Me
               </a>
             </div>
 
             <ul class="hero__notes">
-              <li>Aleppo, Syria</li>
-              <li>Flutter-first product delivery</li>
-              <li>REST, GraphQL, Firebase, WebSockets</li>
+              <li data-i18n="hero.notes.location">Aleppo, Syria</li>
+              <li data-i18n="hero.notes.focus">Flutter-first product delivery</li>
+              <li data-i18n="hero.notes.stack">REST, GraphQL, Firebase, WebSockets</li>
             </ul>
           </div>
 
@@ -96,21 +110,21 @@
               </div>
 
               <div class="scene-card scene-card--top">
-                <span class="scene-card__label">Experience</span>
+                <span class="scene-card__label" data-i18n="hero.cards.experience.label">Experience</span>
                 <strong>8+ years</strong>
-                <span>shipping software and mentoring teams</span>
+                <span data-i18n="hero.cards.experience.text">shipping software and mentoring teams</span>
               </div>
 
               <div class="scene-card scene-card--bottom">
-                <span class="scene-card__label">Impact</span>
+                <span class="scene-card__label" data-i18n="hero.cards.impact.label">Impact</span>
                 <strong>150+ students</strong>
-                <span>guided through graduation projects</span>
+                <span data-i18n="hero.cards.impact.text">guided through graduation projects</span>
               </div>
 
               <div class="scene-card scene-card--side">
-                <span class="scene-card__label">Delivery</span>
+                <span class="scene-card__label" data-i18n="hero.cards.delivery.label">Delivery</span>
                 <strong>App Store + Play Store</strong>
-                <span>release ownership and compliance</span>
+                <span data-i18n="hero.cards.delivery.text">release ownership and compliance</span>
               </div>
 
               <div class="hero__portrait-wrap">
@@ -125,73 +139,73 @@
         <div class="container metrics__grid">
           <article class="metric-card panel reveal tilt-card" data-tilt>
             <span class="metric-card__value">8+</span>
-            <span class="metric-card__label">Years building software</span>
+            <span class="metric-card__label" data-i18n="metrics.years">Years building software</span>
           </article>
           <article class="metric-card panel reveal tilt-card" data-tilt>
             <span class="metric-card__value">150+</span>
-            <span class="metric-card__label">Students mentored</span>
+            <span class="metric-card__label" data-i18n="metrics.students">Students mentored</span>
           </article>
           <article class="metric-card panel reveal tilt-card" data-tilt>
             <span class="metric-card__value">21 days</span>
-            <span class="metric-card__label">to launch the My Day MVP</span>
+            <span class="metric-card__label" data-i18n="metrics.mvp">to launch the My Day MVP</span>
           </article>
           <article class="metric-card panel reveal tilt-card" data-tilt>
             <span class="metric-card__value">2 stores</span>
-            <span class="metric-card__label">App Store and Google Play shipping</span>
+            <span class="metric-card__label" data-i18n="metrics.stores">App Store and Google Play shipping</span>
           </article>
         </div>
       </section>
 
       <section class="section" id="about">
         <div class="container">
-          <div class="section-heading reveal">
-            <span class="eyebrow">About</span>
-            <h2 class="section-title">
-              Engineering with product sense, not just feature output.
-            </h2>
-          </div>
+            <div class="section-heading reveal">
+              <span class="eyebrow" data-i18n="about.eyebrow">About</span>
+              <h2 class="section-title" data-i18n="about.title">
+                Engineering with product sense, not just feature output.
+              </h2>
+            </div>
 
           <div class="about__grid">
             <article class="panel about__panel reveal tilt-card" data-tilt>
-              <p class="about__lead">
+              <p class="about__lead" data-i18n="about.lead">
                 I specialize in cross-platform mobile development with Flutter
                 and the engineering discipline needed to keep products healthy
                 after launch.
               </p>
-              <p>
+              <p data-i18n="about.body1">
                 My recent work spans multi-vendor commerce, printing
                 workflows, on-demand fuel delivery, coupon platforms, QR
                 flows, subscription systems, yard operations, and native
                 Android background services for live provider tracking.
               </p>
-              <p>
+              <p data-i18n="about.body2">
                 I work comfortably from Figma handoff to reusable UI systems,
                 API integration, release management, and production support.
               </p>
             </article>
 
             <article class="panel profile-card reveal tilt-card" data-tilt>
-              <h3>Quick Profile</h3>
+              <h3 data-i18n="about.profile.title">Quick Profile</h3>
               <ul class="profile-list">
                 <li>
-                  <span>Current focus</span>
-                  <strong>Flutter architecture and product delivery</strong>
+                  <span data-i18n="about.profile.focus.label">Current focus</span>
+                  <strong data-i18n="about.profile.focus.value">Flutter architecture and product delivery</strong>
                 </li>
                 <li>
-                  <span>Core stack</span>
-                  <strong>Dart, Flutter, Laravel, PHP, Kotlin, Java</strong>
+                  <span data-i18n="about.profile.stack.label">Core stack</span>
+                  <strong data-i18n="about.profile.stack.value">Dart, Flutter, Laravel, PHP, Kotlin, Java</strong>
                 </li>
                 <li>
-                  <span>State management</span>
-                  <strong>BLoC, Cubit, GetX, Riverpod, MVVM</strong>
+                  <span data-i18n="about.profile.state.label">State management</span>
+                  <strong data-i18n="about.profile.state.value">BLoC, Cubit, GetX, Riverpod, MVVM</strong>
                 </li>
                 <li>
-                  <span>Education</span>
-                  <strong>B.Sc. in Computer Engineering, Aleppo University</strong>
+                  <span data-i18n="about.profile.education.label">Education</span>
+                  <strong data-i18n="about.profile.education.value">B.Sc. in Computer Engineering, Aleppo University</strong>
                 </li>
                 <li>
-                  <span>Languages</span>
-                  <strong>Arabic (native), English (proficient)</strong>
+                  <span data-i18n="about.profile.languages.label">Languages</span>
+                  <strong data-i18n="about.profile.languages.value">Arabic (native), English (proficient)</strong>
                 </li>
               </ul>
             </article>
@@ -201,88 +215,88 @@
 
       <section class="section" id="experience">
         <div class="container">
-          <div class="section-heading reveal">
-            <span class="eyebrow">Experience</span>
-            <h2 class="section-title">
-              Recent roles, shipped products, and technical ownership.
-            </h2>
-          </div>
+            <div class="section-heading reveal">
+              <span class="eyebrow" data-i18n="experience.eyebrow">Experience</span>
+              <h2 class="section-title" data-i18n="experience.title">
+                Recent roles, shipped products, and technical ownership.
+              </h2>
+            </div>
 
           <div class="timeline">
             <article class="timeline__item panel reveal tilt-card" data-tilt>
               <div class="timeline__header">
                 <div>
-                  <h3>Senior Flutter Developer · Part-Time</h3>
+                  <h3 data-i18n="experience.unifi.role">Senior Flutter Developer · Part-Time</h3>
                   <p>UnifiSolutions</p>
                 </div>
-                <span>Dec 2025 – May 2026 · Canada (Remote)</span>
+                <span data-i18n="experience.unifi.period">Dec 2025 - May 2026 · Canada (Remote)</span>
               </div>
               <ul class="timeline__list">
-                <li>Built features for a yard management system across mobile and web apps.</li>
-                <li>Converted Figma designs into reusable pages, widgets, dashboards, and CRUD flows.</li>
-                <li>Delivered QR-based vehicle lookup, inventory reporting, and PDF printing workflows.</li>
+                <li data-i18n="experience.unifi.item1">Built features for a yard management system across mobile and web apps.</li>
+                <li data-i18n="experience.unifi.item2">Converted Figma designs into reusable pages, widgets, dashboards, and CRUD flows.</li>
+                <li data-i18n="experience.unifi.item3">Delivered QR-based vehicle lookup, inventory reporting, and PDF printing workflows.</li>
               </ul>
             </article>
 
             <article class="timeline__item panel reveal tilt-card" data-tilt>
               <div class="timeline__header">
                 <div>
-                  <h3>Senior Flutter Developer</h3>
+                  <h3 data-i18n="experience.digiworld.role">Senior Flutter Developer</h3>
                   <p>DigiWorld Developers</p>
                 </div>
-                <span>May 2024 – Present · Aleppo, Syria</span>
+                <span data-i18n="experience.digiworld.period">May 2024 - Present · Aleppo, Syria</span>
               </div>
               <ul class="timeline__list">
-                <li>Lead Flutter development and mentor a junior developer on production mobile apps.</li>
-                <li>Built and published Paper With Click and Waslak across customer and provider experiences.</li>
-                <li>Implemented native Kotlin background location and heartbeat services for provider tracking.</li>
+                <li data-i18n="experience.digiworld.item1">Lead Flutter development and mentor a junior developer on production mobile apps.</li>
+                <li data-i18n="experience.digiworld.item2">Built and published Paper With Click and Waslak across customer and provider experiences.</li>
+                <li data-i18n="experience.digiworld.item3">Implemented native Kotlin background location and heartbeat services for provider tracking.</li>
               </ul>
             </article>
 
             <article class="timeline__item panel reveal tilt-card" data-tilt>
               <div class="timeline__header">
                 <div>
-                  <h3>Senior Flutter Developer</h3>
+                  <h3 data-i18n="experience.tsh.role">Senior Flutter Developer</h3>
                   <p>TSH</p>
                 </div>
-                <span>Jun 2023 – May 2024 · Egypt (Remote)</span>
+                <span data-i18n="experience.tsh.period">Jun 2023 - May 2024 · Egypt (Remote)</span>
               </div>
               <ul class="timeline__list">
-                <li>Maintained Wathba and Roaya Wattan as multilingual cross-platform commerce products.</li>
-                <li>Worked with BLoC, Cubit, and GetX while integrating Thawani and UR-WAY payment gateways.</li>
-                <li>Built OTP-based QR flows, subscriptions, and scalable modular application structures.</li>
+                <li data-i18n="experience.tsh.item1">Maintained Wathba and Roaya Wattan as multilingual cross-platform commerce products.</li>
+                <li data-i18n="experience.tsh.item2">Worked with BLoC, Cubit, and GetX while integrating Thawani and UR-WAY payment gateways.</li>
+                <li data-i18n="experience.tsh.item3">Built OTP-based QR flows, subscriptions, and scalable modular application structures.</li>
               </ul>
             </article>
 
             <article class="timeline__item panel reveal tilt-card" data-tilt>
               <div class="timeline__header">
                 <div>
-                  <h3>Senior Laravel Developer</h3>
+                  <h3 data-i18n="experience.flexi.role">Senior Laravel Developer</h3>
                   <p>FlexiAcademy</p>
                 </div>
-                <span>Jun 2021 – Jun 2023 · Malaysia (Remote)</span>
+                <span data-i18n="experience.flexi.period">Jun 2021 - Jun 2023 · Malaysia (Remote)</span>
               </div>
               <ul class="timeline__list">
-                <li>Migrated a legacy Moodle platform into Laravel microservices with an API-first architecture.</li>
-                <li>Built REST and GraphQL APIs and added WebSocket features for real-time interactions.</li>
-                <li>Improved scalability and frontend performance using Laravel Lighthouse.</li>
+                <li data-i18n="experience.flexi.item1">Migrated a legacy Moodle platform into Laravel microservices with an API-first architecture.</li>
+                <li data-i18n="experience.flexi.item2">Built REST and GraphQL APIs and added WebSocket features for real-time interactions.</li>
+                <li data-i18n="experience.flexi.item3">Improved scalability and frontend performance using Laravel Lighthouse.</li>
               </ul>
             </article>
           </div>
 
           <div class="experience__aside">
             <article class="panel impact-card reveal">
-              <h3>Selected impact</h3>
+              <h3 data-i18n="impact.title">Selected impact</h3>
               <ul class="impact-list">
-                <li>
+                <li data-i18n="impact.item1">
                   Delivered the My Day Android MVP in 21 days and reached
                   1,500+ downloads within 14 days.
                 </li>
-                <li>
+                <li data-i18n="impact.item2">
                   Helped My Day place 3rd in the Scale Up in Syria 2024
                   competition.
                 </li>
-                <li>
+                <li data-i18n="impact.item3">
                   Mentored 150+ students and supported 35+ graduation
                   projects across Flutter and Android.
                 </li>
@@ -295,23 +309,24 @@
       <section class="section" id="work">
         <div class="container">
           <div class="section-heading reveal">
-            <span class="eyebrow">Selected Work</span>
-            <h2 class="section-title">
+            <span class="eyebrow" data-i18n="work.eyebrow">Selected Work</span>
+            <h2 class="section-title" data-i18n="work.title">
               Production products, platform launches, and high-leverage builds.
             </h2>
           </div>
 
-          <div class="work-switch reveal" role="tablist" aria-label="Work categories">
-            <button class="work-switch__button is-active" type="button" data-work-filter="all">
+          <div class="work-switch reveal" role="tablist" aria-label="Work categories"
+            data-i18n-aria-label="work.aria.categories">
+            <button class="work-switch__button is-active" type="button" data-work-filter="all" data-i18n="work.filters.all">
               All Work
             </button>
-            <button class="work-switch__button" type="button" data-work-filter="ecosystem">
+            <button class="work-switch__button" type="button" data-work-filter="ecosystem" data-i18n="work.filters.ecosystem">
               DigiWorld Ecosystem
             </button>
-            <button class="work-switch__button" type="button" data-work-filter="apps">
+            <button class="work-switch__button" type="button" data-work-filter="apps" data-i18n="work.filters.apps">
               Store Apps
             </button>
-            <button class="work-switch__button" type="button" data-work-filter="systems">
+            <button class="work-switch__button" type="button" data-work-filter="systems" data-i18n="work.filters.systems">
               Systems
             </button>
           </div>
@@ -321,21 +336,21 @@
               <div class="project-card__top">
                 <div class="project-card__brand">
                   <div class="project-card__logo project-card__logo--monogram">
-                    <img src="./imgs/icons/warka.png" alt="waraka-b-nakra logo" class="project-card__logo" />
+                    <img src="./imgs/icons/warka.webp" alt="waraka-b-nakra logo" class="project-card__logo" />
                   </div>
                   <span class="project-card__tag">Flutter · MVVM · GetX</span>
                 </div>
                 <h3>Paper With Click</h3>
               </div>
-              <p>
+              <p data-i18n="projects.paper.description">
                 Multi-vendor eCommerce and printing request platform with
                 customer and vendor experiences, order flows, notifications,
                 and real-time status updates.
               </p>
               <ul class="chip-list">
-                <li>Printing requests</li>
-                <li>Multi-vendor flow</li>
-                <li>Store deployment</li>
+                <li data-i18n="projects.paper.chip1">Printing requests</li>
+                <li data-i18n="projects.paper.chip2">Multi-vendor flow</li>
+                <li data-i18n="projects.paper.chip3">Store deployment</li>
               </ul>
               <div class="project-card__actions">
                 <a href="https://play.google.com/store/apps/details?id=com.digiworld_dev.waraka_customer_mobile"
@@ -355,22 +370,22 @@
               <div class="project-card__top">
                 <div class="project-card__brand">
                   <div class="project-card__logo project-card__logo--monogram">
-                    <img src="./imgs/icons/waslak.png" alt="waslak logo" class="project-card__logo" />
+                    <img src="./imgs/icons/waslak.webp" alt="waslak logo" class="project-card__logo" />
 
                   </div>
                   <span class="project-card__tag">Flutter · Kotlin service</span>
                 </div>
                 <h3>Waslak</h3>
               </div>
-              <p>
+              <p data-i18n="projects.waslak.description">
                 On-demand gas and fuel delivery product with ordering, trip
                 management, live tracking, route updates, and provider
                 availability handled through native Android background work.
               </p>
               <ul class="chip-list">
-                <li>Live tracking</li>
-                <li>Provider heartbeat</li>
-                <li>Customer + provider apps</li>
+                <li data-i18n="projects.waslak.chip1">Live tracking</li>
+                <li data-i18n="projects.waslak.chip2">Provider heartbeat</li>
+                <li data-i18n="projects.waslak.chip3">Customer + provider apps</li>
               </ul>
               <div class="project-card__actions">
                 <a href="https://play.google.com/store/apps/details?id=com.digiworlddev.waselak.customer"
@@ -390,21 +405,21 @@
               <div class="project-card__top">
                 <div class="project-card__brand">
                   <div class="project-card__logo project-card__logo--monogram">
-                    <img src="./imgs/icons/wathba.png" alt="wathba-vendor-app logo" class="project-card__logo" />
+                    <img src="./imgs/icons/wathba.webp" alt="wathba-vendor-app logo" class="project-card__logo" />
                   </div>
                   <span class="project-card__tag">Flutter · Thawani · QR</span>
                 </div>
                 <h3>Wathba Vendor App</h3>
               </div>
-              <p>
+              <p data-i18n="projects.wathba.description">
                 Vendor operations app for a multi-vendor commerce platform,
                 including multilingual support, payment gateway integration,
                 subscription logic, and OTP-based QR workflows.
               </p>
               <ul class="chip-list">
                 <li>Thawani</li>
-                <li>Vendor operations</li>
-                <li>Arabic + English</li>
+                <li data-i18n="projects.wathba.chip2">Vendor operations</li>
+                <li data-i18n="projects.wathba.chip3">Arabic + English</li>
               </ul>
               <div class="project-card__actions">
                 <a href="https://play.google.com/store/apps/details?id=com.wathba.vendor" target="_blank"
@@ -419,24 +434,24 @@
               <div class="project-card__top">
                 <div class="project-card__brand">
                   <div class="project-card__logo project-card__logo--monogram">
-                    <img src="./imgs/icons/royaa.png" alt="wathba-vendor-app logo" class="project-card__logo" />
+                    <img src="./imgs/icons/royaa.webp" alt="wathba-vendor-app logo" class="project-card__logo" />
                   </div>
                   <span class="project-card__tag">Flutter · UR-WAY · Coupons</span>
                 </div>
                 <h3>Roaya Wattan</h3>
               </div>
-              <p>
+              <p data-i18n="projects.roaya.description">
                 Coupon and discount platform built as a multilingual
                 cross-platform app with subscription flows and UR-WAY payment
                 integration.
               </p>
               <ul class="chip-list">
                 <li>UR-WAY</li>
-                <li>Subscriptions</li>
-                <li>Arabic + English</li>
+                <li data-i18n="projects.roaya.chip2">Subscriptions</li>
+                <li data-i18n="projects.roaya.chip3">Arabic + English</li>
               </ul>
               <div class="project-card__actions">
-                <span class="project-note">Private engagement</span>
+                <span class="project-note" data-i18n="projects.private">Private engagement</span>
               </div>
             </article>
 
@@ -449,20 +464,20 @@
                 </div>
                 <h3>DigiPay</h3>
               </div>
-              <p>
+              <p data-i18n="projects.digipay.description">
                 Payment platform delivered as part of the DigiWorld
                 Developers ecosystem, supporting broader product and service
                 workflows beyond a single internal tool.
               </p>
               <ul class="chip-list">
-                <li>Payments platform</li>
-                <li>Payments workflow</li>
-                <li>Ecosystem module</li>
+                <li data-i18n="projects.digipay.chip1">Payments platform</li>
+                <li data-i18n="projects.digipay.chip2">Payments workflow</li>
+                <li data-i18n="projects.digipay.chip3">Ecosystem module</li>
               </ul>
               <div class="project-card__actions">
                 <a href="https://pay.digiworld-dev.com/" target="_blank" rel="noreferrer" class="project-link">
                   <i class="bx bx-link-external"></i>
-                  Visit Site
+                  <span data-i18n="projects.actions.visit">Visit Site</span>
                 </a>
               </div>
             </article>
@@ -476,19 +491,19 @@
                 </div>
                 <h3>DigiPost</h3>
               </div>
-              <p>
+              <p data-i18n="projects.digipost.description">
                 In-development DigiWorld system focused on delivery and post
                 operations as part of the wider internal product ecosystem.
               </p>
               <ul class="chip-list">
-                <li>Under development</li>
-                <li>Internal platform</li>
-                <li>Ecosystem module</li>
+                <li data-i18n="projects.digipost.chip1">Under development</li>
+                <li data-i18n="projects.digipost.chip2">Post operations</li>
+                <li data-i18n="projects.digipost.chip3">Ecosystem module</li>
               </ul>
               <div class="project-card__actions">
                 <a href="https://post.digiworld-dev.com/" target="_blank" rel="noreferrer" class="project-link">
                   <i class="bx bx-link-external"></i>
-                  Visit Site
+                  <span data-i18n="projects.actions.visit">Visit Site</span>
                 </a>
               </div>
             </article>
@@ -502,21 +517,21 @@
                 </div>
                 <h3>DigiChat</h3>
               </div>
-              <p>
+              <p data-i18n="projects.digichat.description">
                 WhatsApp messaging platform with documented API flows for
                 session status, QR connection, signed message sending, and
                 dashboard-driven integration as part of the DigiWorld
                 ecosystem.
               </p>
               <ul class="chip-list">
-                <li>QR sessions</li>
-                <li>Signed API requests</li>
-                <li>SDK and docs</li>
+                <li data-i18n="projects.digichat.chip1">QR sessions</li>
+                <li data-i18n="projects.digichat.chip2">Signed API requests</li>
+                <li data-i18n="projects.digichat.chip3">SDK and docs</li>
               </ul>
               <div class="project-card__actions">
                 <a href="https://digichat.digiworld-dev.com/docs" target="_blank" rel="noreferrer" class="project-link">
                   <i class="bx bx-book-open"></i>
-                  Read Docs
+                  <span data-i18n="projects.actions.docs">Read Docs</span>
                 </a>
               </div>
             </article>
@@ -525,24 +540,24 @@
               <div class="project-card__top">
                 <div class="project-card__brand">
                   <div class="project-card__logo project-card__logo--monogram">
-                    <img src="./imgs/icons/yard.png" alt="yard-management-system logo" class="project-card__logo" />
+                    <img src="./imgs/icons/yard.webp" alt="yard-management-system logo" class="project-card__logo" />
                   </div>
                   <span class="project-card__tag">Flutter · Web · QR/PDF</span>
                 </div>
                 <h3>Yard Management System</h3>
               </div>
-              <p>
+              <p data-i18n="projects.yard.description">
                 Two-application workflow for mobile and web with role-based
                 dashboards, car log management, QR vehicle lookup, inventory
                 reporting, and printable PDF cards for towed vehicles.
               </p>
               <ul class="chip-list">
-                <li>Role dashboards</li>
-                <li>CRUD operations</li>
-                <li>Private product</li>
+                <li data-i18n="projects.yard.chip1">Role dashboards</li>
+                <li data-i18n="projects.yard.chip2">CRUD operations</li>
+                <li data-i18n="projects.yard.chip3">Private product</li>
               </ul>
               <div class="project-card__actions">
-                <span class="project-note">Private engagement</span>
+                <span class="project-note" data-i18n="projects.private">Private engagement</span>
               </div>
             </article>
 
@@ -550,21 +565,21 @@
               <div class="project-card__top">
                 <div class="project-card__brand">
                   <div class="project-card__logo project-card__logo--monogram">
-                    <img src="./imgs/icons/my-day.png" alt="my-day-app logo" class="project-card__logo" />
+                    <img src="./imgs/icons/my-day.webp" alt="my-day-app logo" class="project-card__logo" />
                   </div>
                   <span class="project-card__tag">Android · MVP</span>
                 </div>
                 <h3>My Day App</h3>
               </div>
-              <p>
+              <p data-i18n="projects.myday.description">
                 Built the Android MVP in 21 days. The app reached 1,500+
                 downloads in 14 days and later contributed to a third-place
                 finish in Scale Up in Syria 2024.
               </p>
               <ul class="chip-list">
-                <li>Fast MVP launch</li>
-                <li>Growth proof</li>
-                <li>Competition recognition</li>
+                <li data-i18n="projects.myday.chip1">Fast MVP launch</li>
+                <li data-i18n="projects.myday.chip2">Growth proof</li>
+                <li data-i18n="projects.myday.chip3">Competition recognition</li>
               </ul>
               <div class="project-card__actions">
                 <a href="https://play.google.com/store/apps/details?id=team.inferno.mobile.my_day_app" target="_blank"
@@ -583,19 +598,19 @@
                 </div>
                 <h3>AI-Powered Survey System</h3>
               </div>
-              <p>
+              <p data-i18n="projects.survey.description">
                 Graduation project scored 95%. Used GPT-based
                 recommendations and Gardner’s Multiple Intelligences Theory to
                 match students with suitable project topics and form stronger
                 teams.
               </p>
               <ul class="chip-list">
-                <li>Recommendation logic</li>
-                <li>Microservices mindset</li>
-                <li>Team formation workflow</li>
+                <li data-i18n="projects.survey.chip1">Recommendation logic</li>
+                <li data-i18n="projects.survey.chip2">Microservices mindset</li>
+                <li data-i18n="projects.survey.chip3">Team formation workflow</li>
               </ul>
               <div class="project-card__actions">
-                <span class="project-note">Academic project</span>
+                <span class="project-note" data-i18n="projects.survey.note">Academic project</span>
               </div>
             </article>
           </div>
@@ -605,15 +620,15 @@
       <section class="section" id="skills">
         <div class="container">
           <div class="section-heading reveal">
-            <span class="eyebrow">Stack</span>
-            <h2 class="section-title">
+            <span class="eyebrow" data-i18n="skills.eyebrow">Stack</span>
+            <h2 class="section-title" data-i18n="skills.title">
               The tools, architecture, and delivery habits I rely on.
             </h2>
           </div>
 
           <div class="stack__grid">
             <article class="stack-card panel reveal tilt-card" data-tilt>
-              <h3>Mobile Engineering</h3>
+              <h3 data-i18n="skills.cards.mobile.title">Mobile Engineering</h3>
               <ul class="stack-list">
                 <li>Flutter</li>
                 <li>Dart</li>
@@ -624,7 +639,7 @@
             </article>
 
             <article class="stack-card panel reveal tilt-card" data-tilt>
-              <h3>Architecture</h3>
+              <h3 data-i18n="skills.cards.architecture.title">Architecture</h3>
               <ul class="stack-list">
                 <li>Clean Architecture</li>
                 <li>MVVM</li>
@@ -635,7 +650,7 @@
             </article>
 
             <article class="stack-card panel reveal tilt-card" data-tilt>
-              <h3>Backend and Realtime</h3>
+              <h3 data-i18n="skills.cards.backend.title">Backend and Realtime</h3>
               <ul class="stack-list">
                 <li>Laravel</li>
                 <li>PHP</li>
@@ -646,7 +661,7 @@
             </article>
 
             <article class="stack-card panel reveal tilt-card" data-tilt>
-              <h3>Delivery</h3>
+              <h3 data-i18n="skills.cards.delivery.title">Delivery</h3>
               <ul class="stack-list">
                 <li>GitHub and GitLab</li>
                 <li>App Store and Play Store releases</li>
@@ -659,20 +674,20 @@
 
           <div class="services__grid">
             <article class="service-card panel reveal tilt-card" data-tilt>
-              <h3>Launch new mobile products</h3>
-              <p>From Figma handoff to reusable UI, API integration, QA, and store release.</p>
+              <h3 data-i18n="services.launch.title">Launch new mobile products</h3>
+              <p data-i18n="services.launch.body">From Figma handoff to reusable UI, API integration, QA, and store release.</p>
             </article>
             <article class="service-card panel reveal tilt-card" data-tilt>
-              <h3>Stabilize existing codebases</h3>
-              <p>Improve state management, structure, performance, and long-term maintainability.</p>
+              <h3 data-i18n="services.stabilize.title">Stabilize existing codebases</h3>
+              <p data-i18n="services.stabilize.body">Improve state management, structure, performance, and long-term maintainability.</p>
             </article>
             <article class="service-card panel reveal tilt-card" data-tilt>
-              <h3>Bridge app and backend teams</h3>
-              <p>Translate product needs into workable API contracts, realtime flows, and release plans.</p>
+              <h3 data-i18n="services.bridge.title">Bridge app and backend teams</h3>
+              <p data-i18n="services.bridge.body">Translate product needs into workable API contracts, realtime flows, and release plans.</p>
             </article>
             <article class="service-card panel reveal tilt-card" data-tilt>
-              <h3>Lead and mentor delivery</h3>
-              <p>Support junior developers, raise code quality, and keep shipping velocity realistic.</p>
+              <h3 data-i18n="services.mentor.title">Lead and mentor delivery</h3>
+              <p data-i18n="services.mentor.body">Support junior developers, raise code quality, and keep shipping velocity realistic.</p>
             </article>
           </div>
         </div>
@@ -681,27 +696,27 @@
       <section class="section" id="contact">
         <div class="container">
           <div class="section-heading reveal">
-            <span class="eyebrow">Contact</span>
-            <h2 class="section-title">
+            <span class="eyebrow" data-i18n="contact.eyebrow">Contact</span>
+            <h2 class="section-title" data-i18n="contact.title">
               Open to remote roles, product teams, and short build sprints.
             </h2>
           </div>
 
           <div class="contact__grid">
             <article class="panel contact__panel reveal tilt-card" data-tilt>
-              <h3>Reach me directly</h3>
+              <h3 data-i18n="contact.direct">Reach me directly</h3>
               <div class="contact__links">
                 <a href="mailto:mohammed.9issa@gmail.com" class="contact__link">
                   <i class="bx bx-mail-send"></i>
                   <span>
-                    <strong>Email</strong>
+                    <strong data-i18n="contact.links.email">Email</strong>
                     <small>mohammed.9issa@gmail.com</small>
                   </span>
                 </a>
                 <a href="https://www.linkedin.com/in/mmi997/" target="_blank" rel="noreferrer" class="contact__link">
                   <i class="bx bxl-linkedin-square"></i>
                   <span>
-                    <strong>LinkedIn</strong>
+                    <strong data-i18n="contact.links.linkedin">LinkedIn</strong>
                     <small>linkedin.com/in/mmi997</small>
                   </span>
                 </a>
@@ -709,21 +724,21 @@
                   class="contact__link">
                   <i class="bx bxl-whatsapp"></i>
                   <span>
-                    <strong>WhatsApp</strong>
+                    <strong data-i18n="contact.links.whatsapp">WhatsApp</strong>
                     <small>+963 943 581 149</small>
                   </span>
                 </a>
                 <a href="https://t.me/m149i" target="_blank" rel="noreferrer" class="contact__link">
                   <i class="bx bxl-telegram"></i>
                   <span>
-                    <strong>Telegram</strong>
+                    <strong data-i18n="contact.links.telegram">Telegram</strong>
                     <small>@m149i</small>
                   </span>
                 </a>
                 <a href="https://github.com/Inferno-Team" target="_blank" rel="noreferrer" class="contact__link">
                   <i class="bx bxl-github"></i>
                   <span>
-                    <strong>GitHub</strong>
+                    <strong data-i18n="contact.links.github">GitHub</strong>
                     <small>github.com/Inferno-Team</small>
                   </span>
                 </a>
@@ -731,28 +746,31 @@
             </article>
 
             <article class="panel form-panel reveal tilt-card" data-tilt>
-              <h3>Send project details</h3>
+              <h3 data-i18n="contact.form.title">Send project details</h3>
               <form class="contact__form" id="contact-form">
                 <label class="field">
-                  <span>Name</span>
-                  <input type="text" id="mail_name" name="name" autocomplete="name" placeholder="Your name" required />
+                  <span data-i18n="contact.form.name">Name</span>
+                  <input type="text" id="mail_name" name="name" autocomplete="name" placeholder="Your name"
+                    data-i18n-placeholder="contact.form.namePlaceholder" required />
                 </label>
 
                 <label class="field">
-                  <span>Email</span>
+                  <span data-i18n="contact.form.email">Email</span>
                   <input type="email" id="mail_email" name="email" autocomplete="email" placeholder="you@example.com"
+                    data-i18n-placeholder="contact.form.emailPlaceholder"
                     required />
                 </label>
 
                 <label class="field field--full">
-                  <span>Project</span>
+                  <span data-i18n="contact.form.project">Project</span>
                   <textarea id="mail_project" name="project" rows="6"
                     placeholder="Tell me what you are building, what stage it is in, and where you need help."
+                    data-i18n-placeholder="contact.form.projectPlaceholder"
                     required></textarea>
                 </label>
 
                 <div class="form-actions">
-                  <button class="button button--primary" type="submit">
+                  <button class="button button--primary" type="submit" data-i18n="contact.form.submit">
                     Send Message
                   </button>
                   <p class="contact__form-status" id="contact-form-status" aria-live="polite"></p>
@@ -764,13 +782,13 @@
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer__inner">
-        <p>Mohammed Mousa Alissa</p>
-        <p>Software Engineer · Flutter Developer</p>
-        <p>&copy; <span id="current-year"></span> All rights reserved.</p>
-      </div>
-    </footer>
+      <footer class="site-footer">
+        <div class="container footer__inner">
+          <p>Mohammed Mousa Alissa</p>
+          <p data-i18n="footer.role">Software Engineer · Flutter Developer</p>
+          <p>&copy; <span id="current-year"></span> <span data-i18n="footer.copy">All rights reserved.</span></p>
+        </div>
+      </footer>
   </div>
 
   <script src="js/script.js" defer></script>
